@@ -1,10 +1,10 @@
 const translations = {
   en: {
     skip: "Skip to content", theme: "Theme", availability: "Open to junior Python / DevOps roles",
-    navProfile: "Profile", navProjects: "Projects", navExperience: "Experience",
+    navProfile: "Profile", navProjects: "Projects", navExperience: "Experience", navContact: "Contact",
     heroLine1: "JUNIOR PYTHON", heroLine2: "DEVOPS / SYSTEMS",
     heroIntro: "Collegium Da Vinci student with practical experience in Python services, Linux, Docker, CI/CD and self-hosting.",
-    viewProjects: "View projects", roleLabel: "ROLE", roleValue: "PYTHON / DEVOPS", locationLabel: "LOCATION",
+    viewProjects: "View projects", contactMe: "Contact me", roleLabel: "ROLE", roleValue: "PYTHON / DEVOPS", locationLabel: "LOCATION",
     educationLabel: "EDUCATION", languagesLabel: "LANGUAGES", aboutEyebrow: "PROFILE",
     aboutTitle: "About me",
     aboutText: "I study at Collegium Da Vinci in Poznań and focus on junior Python, DevOps and system administration roles. My experience comes from public projects, VPS deployments and home infrastructure.",
@@ -19,15 +19,15 @@ const translations = {
     selfText: "Home server / Media / File storage / Device sync / Client-server systems",
     contactEyebrow: "CONTACT", contactTitle: "Contact",
     contactText: "Open to junior Python, DevOps and system administration opportunities.",
-    openGithub: "Open GitHub ↗", contactNote: "Contact details will be added before publishing.",
+    openGithub: "Open GitHub ↗", contactNote: "Preferred contact: email or Telegram.",
     footer: "STATIC PORTFOLIO / NO TRACKING", backTop: "BACK TO TOP ↑", source: "SOURCE ↗", private: "NO PUBLIC REPOSITORY", flagship: "MAIN PROJECT / PUBLIC"
   },
   pl: {
     skip: "Przejdź do treści", theme: "Motyw", availability: "Otwarty na stanowiska juniorskie",
-    navProfile: "Profil", navProjects: "Projekty", navExperience: "Doświadczenie",
+    navProfile: "Profil", navProjects: "Projekty", navExperience: "Doświadczenie", navContact: "Kontakt",
     heroLine1: "JUNIOR PYTHON", heroLine2: "DEVOPS / SYSTEMY",
     heroIntro: "Student Collegium Da Vinci z praktycznym doświadczeniem w Pythonie, Linuxie, Dockerze, CI/CD i self-hostingu.",
-    viewProjects: "Zobacz projekty", roleLabel: "ROLA", roleValue: "PYTHON / DEVOPS", locationLabel: "LOKALIZACJA",
+    viewProjects: "Zobacz projekty", contactMe: "Kontakt", roleLabel: "ROLA", roleValue: "PYTHON / DEVOPS", locationLabel: "LOKALIZACJA",
     educationLabel: "EDUKACJA", languagesLabel: "JĘZYKI", aboutEyebrow: "PROFIL",
     aboutTitle: "O mnie",
     aboutText: "Studiuję w Collegium Da Vinci w Poznaniu i szukam stanowiska Junior Python, DevOps lub Administrator Systemów. Moje doświadczenie pochodzi z publicznych projektów, wdrożeń VPS i domowej infrastruktury.",
@@ -42,15 +42,15 @@ const translations = {
     selfText: "Serwer domowy / Media / Pliki / Synchronizacja urządzeń / Systemy klient-serwer",
     contactEyebrow: "KONTAKT", contactTitle: "Kontakt",
     contactText: "Szukam możliwości rozwoju jako Junior Python Developer, DevOps lub Administrator Systemów.",
-    openGithub: "Otwórz GitHub ↗", contactNote: "Dane kontaktowe zostaną dodane przed publikacją.",
+    openGithub: "Otwórz GitHub ↗", contactNote: "Preferowany kontakt: email lub Telegram.",
     footer: "STATYCZNE PORTFOLIO / BEZ ŚLEDZENIA", backTop: "WRÓĆ NA GÓRĘ ↑", source: "KOD ↗", private: "BRAK PUBLICZNEGO REPOZYTORIUM", flagship: "GŁÓWNY PROJEKT / PUBLICZNY"
   },
   uk: {
     skip: "Перейти до вмісту", theme: "Тема", availability: "Відкритий до junior-позицій",
-    navProfile: "Профіль", navProjects: "Проєкти", navExperience: "Досвід",
+    navProfile: "Профіль", navProjects: "Проєкти", navExperience: "Досвід", navContact: "Контакт",
     heroLine1: "JUNIOR PYTHON", heroLine2: "DEVOPS / СИСТЕМИ",
     heroIntro: "Студент Collegium Da Vinci з практичним досвідом у Python, Linux, Docker, CI/CD та self-hosting.",
-    viewProjects: "Переглянути проєкти", roleLabel: "НАПРЯМОК", roleValue: "PYTHON / DEVOPS", locationLabel: "ЛОКАЦІЯ",
+    viewProjects: "Переглянути проєкти", contactMe: "Контакт", roleLabel: "НАПРЯМОК", roleValue: "PYTHON / DEVOPS", locationLabel: "ЛОКАЦІЯ",
     educationLabel: "ОСВІТА", languagesLabel: "МОВИ", aboutEyebrow: "ПРОФІЛЬ",
     aboutTitle: "Про мене",
     aboutText: "Я навчаюся в Collegium Da Vinci у Познані та шукаю junior-позицію у Python, DevOps або системному адмініструванні. Мій досвід базується на публічних проєктах, VPS-розгортаннях і домашній інфраструктурі.",
@@ -65,7 +65,7 @@ const translations = {
     selfText: "Домашній сервер / Медіа / Файли / Синхронізація пристроїв / Клієнт-серверні системи",
     contactEyebrow: "КОНТАКТ", contactTitle: "Контакт",
     contactText: "Відкритий до Junior Python, DevOps та System Administration позицій.",
-    openGithub: "Відкрити GitHub ↗", contactNote: "Контактні дані буде додано перед публікацією.",
+    openGithub: "Відкрити GitHub ↗", contactNote: "Бажаний контакт: email або Telegram.",
     footer: "СТАТИЧНЕ ПОРТФОЛІО / БЕЗ ТРЕКІНГУ", backTop: "НАГОРУ ↑", source: "КОД ↗", private: "НЕМАЄ ПУБЛІЧНОГО РЕПОЗИТОРІЮ", flagship: "ОСНОВНИЙ ПРОЄКТ / ПУБЛІЧНИЙ"
   }
 };
@@ -213,6 +213,7 @@ function setTheme(theme) {
 
 document.querySelectorAll(".language-button").forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
 document.querySelector(".theme-button").addEventListener("click", () => setTheme(currentTheme === "dark" ? "light" : "dark"));
+document.querySelector("[data-scroll-top]").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 document.querySelector("#year").textContent = new Date().getFullYear();
 setTheme(currentTheme);
 setLanguage(currentLanguage);

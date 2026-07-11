@@ -161,10 +161,21 @@ h2 { max-width: 960px; margin: 0; font-size: clamp(2rem, 4vw, 3.8rem); line-heig
 .contact .eyebrow, .contact-panel p { color: color-mix(in srgb, var(--inverse) 62%, transparent); }
 .contact .button-primary { background: var(--inverse); color: var(--text); border-color: var(--inverse); }
 .contact-panel p { line-height: 1.6; }
+.contact-links { margin: 1.8rem 0; display: grid; border-top: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); }
+.contact-links a {
+  display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 1rem; align-items: center;
+  padding: 1rem 0; border-bottom: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent);
+  color: var(--inverse); text-decoration: none;
+}
+.contact-links a:hover strong { text-decoration: underline; }
+.contact-links span { color: color-mix(in srgb, var(--inverse) 58%, transparent); font: .62rem var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
+.contact-links strong { min-width: 0; overflow-wrap: anywhere; font-size: clamp(.98rem, 1.5vw, 1.15rem); }
 .contact-note { font: .65rem var(--font-mono); }
 
 footer { min-height: 90px; padding: 1.5rem clamp(1.2rem, 4vw, 4rem); display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font: .62rem var(--font-mono); }
 footer a { text-decoration: none; }
+.back-top { padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; text-transform: uppercase; }
+.back-top:hover { color: var(--text); }
 
 @media (min-width: 761px) and (max-width: 1000px) {
   h1 { font-size: clamp(2.5rem, 5.3vw, 3.5rem); }
@@ -177,6 +188,7 @@ footer a { text-decoration: none; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability-grid article { min-height: auto; border-left: 1px solid var(--line); }
   .contact { grid-template-columns: 1fr; }
+  .contact-links a { grid-template-columns: 1fr; gap: .45rem; }
 }
 
 @media (max-width: 620px) {

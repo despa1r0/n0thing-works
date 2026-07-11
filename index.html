@@ -16,7 +16,7 @@
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Vladyslav Solonskyi, home">
+      <a class="brand" href="./" aria-label="Vladyslav Solonskyi, home">
         <span class="brand-mark" aria-hidden="true">VS</span>
         <span>VLADYSLAV<br />SOLONSKYI</span>
       </a>
@@ -25,6 +25,7 @@
         <a href="#profile" data-i18n="navProfile">Profile</a>
         <a href="#projects" data-i18n="navProjects">Projects</a>
         <a href="#additional-work" data-i18n="navExperience">Experience</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
 
       <nav class="header-actions" aria-label="Page controls">
@@ -54,6 +55,7 @@
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects" data-i18n="viewProjects">View projects</a>
+            <a class="button" href="#contact" data-i18n="contactMe">Contact me</a>
             <a class="button" href="https://github.com/despa1r0" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
         </div>
@@ -160,8 +162,13 @@
         </div>
         <div class="contact-panel">
           <p data-i18n="contactText">Open to junior Python, DevOps and system administration opportunities.</p>
-          <a class="button button-primary" href="https://github.com/despa1r0" target="_blank" rel="noreferrer" data-i18n="openGithub">Open GitHub ↗</a>
-          <p class="contact-note" data-i18n="contactNote">Email and custom domain can be added here before launch.</p>
+          <div class="contact-links" aria-label="Contact details">
+            <a href="mailto:vladsol720@gmail.com"><span>Email</span><strong>vladsol720@gmail.com</strong></a>
+            <a href="https://t.me/despa1r0" target="_blank" rel="noreferrer"><span>Telegram</span><strong>@despa1r0</strong></a>
+            <a href="tel:+48792517852"><span>Phone</span><strong>+48 792 517 852</strong></a>
+            <a href="https://github.com/despa1r0" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/despa1r0</strong></a>
+          </div>
+          <p class="contact-note" data-i18n="contactNote">Preferred contact: email or Telegram.</p>
         </div>
       </section>
     </main>
@@ -169,7 +176,7 @@
     <footer>
       <span>© <span id="year"></span> VLADYSLAV SOLONSKYI</span>
       <span data-i18n="footer">BUILT WITH INTENT / NO TRACKING</span>
-      <a href="#top" data-i18n="backTop">BACK TO TOP ↑</a>
+      <button class="back-top" type="button" data-scroll-top data-i18n="backTop">BACK TO TOP ↑</button>
     </footer>
 
     <noscript>This website requires JavaScript for language and theme controls.</noscript>
