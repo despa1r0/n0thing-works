@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#090909" />
+    <meta name="description" content="Vladyslav Solonskyi — Python developer and DevOps portfolio." />
+    <title>Vladyslav Solonskyi — Portfolio</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Vladyslav Solonskyi, home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span>VLADYSLAV<br />SOLONSKYI</span>
+      </a>
+
+      <nav class="header-actions" aria-label="Page controls">
+        <div class="language-switcher" role="group" aria-label="Language">
+          <button class="control language-button" type="button" data-lang="en">EN</button>
+          <button class="control language-button" type="button" data-lang="pl">PL</button>
+          <button class="control language-button" type="button" data-lang="uk">UA</button>
+        </div>
+        <button class="control theme-button" type="button" aria-label="Switch theme">
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span data-i18n="theme">Theme</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span><span data-i18n="availability">Available for junior roles</span></p>
+          <h1>
+            <span data-i18n="heroLine1">I BUILD</span><br />
+            <span class="outline-text" data-i18n="heroLine2">USEFUL SYSTEMS.</span>
+          </h1>
+          <p class="hero-intro" data-i18n="heroIntro">
+            Python development, infrastructure and self-hosted services — built to solve real problems.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects" data-i18n="viewProjects">View projects</a>
+            <a class="button" href="https://github.com/despa1r0" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-console" aria-label="Profile summary">
+          <div class="console-head"><span>PROFILE.SYS</span><span class="console-dots">● ● ●</span></div>
+          <dl class="system-list">
+            <div><dt data-i18n="roleLabel">ROLE</dt><dd data-i18n="roleValue">PYTHON / DEVOPS</dd></div>
+            <div><dt data-i18n="locationLabel">LOCATION</dt><dd>POZNAŃ, PL</dd></div>
+            <div><dt data-i18n="educationLabel">EDUCATION</dt><dd>CDV / 2024—NOW</dd></div>
+            <div><dt data-i18n="languagesLabel">LANGUAGES</dt><dd>UA / EN / PL</dd></div>
+          </dl>
+          <div class="signal" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-index">01</div>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="aboutEyebrow">ABOUT / APPROACH</p>
+          <h2 data-i18n="aboutTitle">Code that leaves the tutorial and enters the real world.</h2>
+        </div>
+        <div class="about-copy">
+          <p data-i18n="aboutText">
+            I am a Collegium Da Vinci student focused on Python and infrastructure. I build bots, data tools, deployment pipelines and self-hosted services, learning through complete working systems.
+          </p>
+          <div class="principles">
+            <span data-i18n="principle1">01 / PRACTICAL</span>
+            <span data-i18n="principle2">02 / DOCUMENTED</span>
+            <span data-i18n="principle3">03 / DEPLOYABLE</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-index">02</div>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="projectsEyebrow">SELECTED / WORK</p>
+          <h2 data-i18n="projectsTitle">Projects built end to end.</h2>
+        </div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
+
+      <section class="section capabilities" id="capabilities">
+        <div class="section-index">03</div>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="capabilitiesEyebrow">CAPABILITIES / STACK</p>
+          <h2 data-i18n="capabilitiesTitle">Development meets operations.</h2>
+        </div>
+        <div class="capability-grid">
+          <article>
+            <span class="capability-code">PY</span>
+            <h3 data-i18n="backendTitle">Python & backend</h3>
+            <p>Python / SQLAlchemy / PostgreSQL / aiogram / Flask / aiohttp / Playwright</p>
+          </article>
+          <article>
+            <span class="capability-code">OP</span>
+            <h3 data-i18n="opsTitle">Infrastructure</h3>
+            <p>Linux / Docker / Compose / VPS / CI/CD / Monitoring / Firewall / Git</p>
+          </article>
+          <article>
+            <span class="capability-code">SL</span>
+            <h3 data-i18n="selfTitle">Self-hosting</h3>
+            <p data-i18n="selfText">Home server / Media / File storage / Device sync / Client-server systems</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div>
+          <p class="eyebrow" data-i18n="contactEyebrow">CONTACT / NEXT STEP</p>
+          <h2 data-i18n="contactTitle">LET'S BUILD<br />SOMETHING USEFUL.</h2>
+        </div>
+        <div class="contact-panel">
+          <p data-i18n="contactText">Open to junior Python, DevOps and system administration opportunities.</p>
+          <a class="button button-primary" href="https://github.com/despa1r0" target="_blank" rel="noreferrer" data-i18n="openGithub">Open GitHub ↗</a>
+          <p class="contact-note" data-i18n="contactNote">Email and custom domain can be added here before launch.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> VLADYSLAV SOLONSKYI</span>
+      <span data-i18n="footer">BUILT WITH INTENT / NO TRACKING</span>
+      <a href="#top" data-i18n="backTop">BACK TO TOP ↑</a>
+    </footer>
+
+    <noscript>This website requires JavaScript for language and theme controls.</noscript>
+  </body>
+</html>
