@@ -156,23 +156,30 @@ h2 { max-width: 960px; margin: 0; font-size: clamp(2rem, 4vw, 3.8rem); line-heig
 .capability-grid h3 { margin: 2.5rem 0 1rem; font-size: 1.2rem; }
 .capability-grid p { margin: 0; color: var(--muted); line-height: 1.6; font-size: .9rem; }
 
-.contact { padding: clamp(3.5rem, 6vw, 6rem) clamp(1.2rem, 4vw, 4rem); display: grid; grid-template-columns: minmax(260px, .8fr) minmax(420px, 1fr); gap: clamp(2.5rem, 6vw, 7rem); align-items: center; background: var(--text); color: var(--inverse); }
-.contact h2 { font-size: clamp(3rem, 5vw, 5.25rem); }
-.contact .eyebrow, .contact-panel p { color: color-mix(in srgb, var(--inverse) 62%, transparent); }
-.contact .button-primary { background: var(--inverse); color: var(--text); border-color: var(--inverse); }
-.contact-panel { width: 100%; max-width: 760px; justify-self: end; }
-.contact-panel p { max-width: 620px; margin: 0; line-height: 1.6; }
-.contact-links { margin: 1.8rem 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); border-left: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); }
-.contact-links a {
-  min-height: 104px; display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;
-  padding: 1rem; border-right: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent);
-  color: var(--inverse); text-decoration: none; background: color-mix(in srgb, var(--inverse) 4%, transparent);
+.contact-intro { max-width: 700px; margin: 0 0 2.5rem; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.25rem); line-height: 1.6; }
+.contact-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.contact-card {
+  min-height: 180px; display: flex; flex-direction: column; gap: .6rem;
+  padding: 1.4rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  text-decoration: none; color: var(--text); background: var(--bg);
+  transition: background 180ms ease, transform 160ms ease;
 }
-.contact-links a:hover { background: color-mix(in srgb, var(--inverse) 9%, transparent); }
-.contact-links a:hover strong { text-decoration: underline; text-underline-offset: 3px; }
-.contact-links span { color: color-mix(in srgb, var(--inverse) 58%, transparent); font: .62rem var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
-.contact-links strong { min-width: 0; overflow-wrap: anywhere; font: 700 clamp(.9rem, 1.2vw, 1.05rem) var(--font-sans); line-height: 1.25; }
-.contact-note { font: .65rem var(--font-mono); }
+.contact-card:hover { background: var(--panel); transform: translateY(-2px); }
+.contact-card:hover .contact-value { text-decoration: underline; text-underline-offset: 3px; }
+.contact-icon { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); font-size: 1rem; line-height: 1; }
+.contact-label { margin-top: auto; color: var(--muted); font: .62rem var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
+.contact-value { min-width: 0; overflow-wrap: anywhere; font: 700 clamp(.9rem, 1.2vw, 1.05rem) var(--font-sans); line-height: 1.25; }
+.contact-note { margin-top: 1.6rem; color: var(--muted); font: .65rem var(--font-mono); }
+.contact-card--copyable { cursor: pointer; position: relative; }
+.contact-icon svg { display: block; }
+.copy-toast {
+  position: absolute; top: 1rem; right: 1rem;
+  padding: .35rem .65rem; background: var(--text); color: var(--inverse);
+  font: 600 .62rem var(--font-mono); letter-spacing: .06em; text-transform: uppercase;
+  opacity: 0; transform: translateY(4px); pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+.copy-toast.visible { opacity: 1; transform: translateY(0); }
 
 footer { min-height: 90px; padding: 1.5rem clamp(1.2rem, 4vw, 4rem); display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font: .62rem var(--font-mono); }
 footer a { text-decoration: none; }
@@ -189,10 +196,8 @@ footer a { text-decoration: none; }
   .profile-facts, .experience-list { grid-template-columns: 1fr; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability-grid article { min-height: auto; border-left: 1px solid var(--line); }
-  .contact { grid-template-columns: 1fr; }
-  .contact-panel { max-width: none; justify-self: stretch; }
-  .contact-links { grid-template-columns: 1fr; }
-  .contact-links a { min-height: 88px; }
+  .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-card { min-height: 160px; }
 }
 
 @media (max-width: 620px) {
@@ -207,6 +212,8 @@ footer a { text-decoration: none; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 390px; }
   .principles { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-card { min-height: 120px; }
   footer { align-items: flex-start; flex-direction: column; }
 }
 

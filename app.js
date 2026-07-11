@@ -217,3 +217,20 @@ document.querySelector("[data-scroll-top]").addEventListener("click", () => wind
 document.querySelector("#year").textContent = new Date().getFullYear();
 setTheme(currentTheme);
 setLanguage(currentLanguage);
+
+document.querySelectorAll("[data-copy]").forEach(card => {
+  function copyValue() {
+    const text = card.dataset.copy;
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = card.querySelector(".copy-toast");
+      if (toast) {
+        toast.classList.add("visible");
+        setTimeout(() => toast.classList.remove("visible"), 1600);
+      }
+    });
+  }
+  card.addEventListener("click", copyValue);
+  card.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); copyValue(); }
+  });
+});
