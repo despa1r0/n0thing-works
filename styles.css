@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
   color-scheme: dark;
   --bg: #090909;
@@ -13,8 +11,8 @@
   --dot: rgba(241, 241, 239, 0.14);
   --header: rgba(9, 9, 9, 0.84);
   --shadow: rgba(255, 255, 255, 0.08);
-  --font-sans: "Inter", Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", Consolas, monospace;
+  --font-sans: Arial, "Helvetica Neue", sans-serif;
+  --font-mono: Consolas, "Courier New", monospace;
 }
 
 :root[data-theme="light"] {

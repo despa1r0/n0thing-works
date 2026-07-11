@@ -9,15 +9,18 @@ Minimal monochrome portfolio inspired by the visual language of Nothing products
 - Responsive desktop and mobile layouts
 - Projects generated from a single data array in `app.js`
 - Accessible navigation and reduced-motion support
-- Deployable to GitHub Pages, Cloudflare Pages, Netlify, or any static host
+- Deployable to GitHub Pages, a VPS with Nginx, or any static host
+- Restrictive Content Security Policy and no third-party runtime requests
 
 ## Local development
 
 Run any static server in this directory, for example:
 
 ```bash
-npx serve .
+python -m http.server 4173 --bind 127.0.0.1
 ```
+
+Then open `http://127.0.0.1:4173`.
 
 ## Add another project
 
@@ -25,4 +28,4 @@ Add one object to the `projects` array in `app.js`. Include translated `title` a
 
 ## Custom domain
 
-The repository is ready for static hosting. DNS instructions for Name.com depend on the chosen hosting provider and are documented in the project handoff.
+The repository contains `CNAME` for `n0thing.works`, an initial HTTP configuration at `deploy/nginx.bootstrap.conf.example`, and a hardened HTTPS configuration at `deploy/nginx.conf.example`.
