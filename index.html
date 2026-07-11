@@ -21,6 +21,12 @@
         <span>VLADYSLAV<br />SOLONSKYI</span>
       </a>
 
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#profile" data-i18n="navProfile">Profile</a>
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="#additional-work" data-i18n="navExperience">Experience</a>
+      </nav>
+
       <nav class="header-actions" aria-label="Page controls">
         <div class="language-switcher" role="group" aria-label="Language">
           <button class="control language-button" type="button" data-lang="en">EN</button>
@@ -66,7 +72,7 @@
         </div>
       </section>
 
-      <section class="section about" id="about">
+      <section class="section about" id="profile">
         <div class="section-index">01</div>
         <div class="section-heading">
           <p class="eyebrow" data-i18n="aboutEyebrow">ABOUT / APPROACH</p>
@@ -81,6 +87,26 @@
             <span data-i18n="principle2">02 / DOCUMENTED</span>
             <span data-i18n="principle3">03 / DEPLOYABLE</span>
           </div>
+          <div class="profile-facts">
+            <article>
+              <span class="fact-label" data-i18n="educationFactLabel">EDUCATION</span>
+              <strong>Collegium Da Vinci</strong>
+              <p data-i18n="educationFactValue">Poznań / 2024—Present</p>
+            </article>
+            <article>
+              <span class="fact-label" data-i18n="languagesFactLabel">LANGUAGES</span>
+              <ul class="language-list">
+                <li><strong data-i18n="ukrainianLanguage">Ukrainian</strong><span data-i18n="nativeLevel">Native</span></li>
+                <li><strong data-i18n="englishLanguage">English</strong><span>B2</span></li>
+                <li><strong data-i18n="polishLanguage">Polish</strong><span>B1+</span></li>
+              </ul>
+            </article>
+            <article>
+              <span class="fact-label" data-i18n="focusFactLabel">CURRENT FOCUS</span>
+              <strong data-i18n="focusFactValue">Junior Python / DevOps</strong>
+              <p data-i18n="focusFactNote">Backend, automation and reliable deployment.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -93,8 +119,17 @@
         <div class="projects-grid" id="projects-grid"></div>
       </section>
 
-      <section class="section capabilities" id="capabilities">
+      <section class="section additional-work" id="additional-work">
         <div class="section-index">03</div>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="additionalEyebrow">PRIVATE / INFRASTRUCTURE WORK</p>
+          <h2 data-i18n="additionalTitle">Hands-on systems beyond public repositories.</h2>
+        </div>
+        <div class="experience-list" id="experience-list"></div>
+      </section>
+
+      <section class="section capabilities" id="capabilities">
+        <div class="section-index">04</div>
         <div class="section-heading">
           <p class="eyebrow" data-i18n="capabilitiesEyebrow">CAPABILITIES / STACK</p>
           <h2 data-i18n="capabilitiesTitle">Development meets operations.</h2>
