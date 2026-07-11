@@ -156,20 +156,22 @@ h2 { max-width: 960px; margin: 0; font-size: clamp(2rem, 4vw, 3.8rem); line-heig
 .capability-grid h3 { margin: 2.5rem 0 1rem; font-size: 1.2rem; }
 .capability-grid p { margin: 0; color: var(--muted); line-height: 1.6; font-size: .9rem; }
 
-.contact { padding: clamp(3.5rem, 6vw, 6rem) clamp(1.2rem, 4vw, 4rem); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: end; background: var(--text); color: var(--inverse); }
-.contact h2 { font-size: clamp(2.5rem, 5vw, 5rem); }
+.contact { padding: clamp(3.5rem, 6vw, 6rem) clamp(1.2rem, 4vw, 4rem); display: grid; grid-template-columns: minmax(260px, .8fr) minmax(420px, 1fr); gap: clamp(2.5rem, 6vw, 7rem); align-items: center; background: var(--text); color: var(--inverse); }
+.contact h2 { font-size: clamp(3rem, 5vw, 5.25rem); }
 .contact .eyebrow, .contact-panel p { color: color-mix(in srgb, var(--inverse) 62%, transparent); }
 .contact .button-primary { background: var(--inverse); color: var(--text); border-color: var(--inverse); }
-.contact-panel p { line-height: 1.6; }
-.contact-links { margin: 1.8rem 0; display: grid; border-top: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); }
+.contact-panel { width: 100%; max-width: 760px; justify-self: end; }
+.contact-panel p { max-width: 620px; margin: 0; line-height: 1.6; }
+.contact-links { margin: 1.8rem 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); border-left: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); }
 .contact-links a {
-  display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 1rem; align-items: center;
-  padding: 1rem 0; border-bottom: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent);
-  color: var(--inverse); text-decoration: none;
+  min-height: 104px; display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;
+  padding: 1rem; border-right: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--inverse) 28%, transparent);
+  color: var(--inverse); text-decoration: none; background: color-mix(in srgb, var(--inverse) 4%, transparent);
 }
-.contact-links a:hover strong { text-decoration: underline; }
+.contact-links a:hover { background: color-mix(in srgb, var(--inverse) 9%, transparent); }
+.contact-links a:hover strong { text-decoration: underline; text-underline-offset: 3px; }
 .contact-links span { color: color-mix(in srgb, var(--inverse) 58%, transparent); font: .62rem var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
-.contact-links strong { min-width: 0; overflow-wrap: anywhere; font-size: clamp(.98rem, 1.5vw, 1.15rem); }
+.contact-links strong { min-width: 0; overflow-wrap: anywhere; font: 700 clamp(.9rem, 1.2vw, 1.05rem) var(--font-sans); line-height: 1.25; }
 .contact-note { font: .65rem var(--font-mono); }
 
 footer { min-height: 90px; padding: 1.5rem clamp(1.2rem, 4vw, 4rem); display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--muted); font: .62rem var(--font-mono); }
@@ -188,7 +190,9 @@ footer a { text-decoration: none; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability-grid article { min-height: auto; border-left: 1px solid var(--line); }
   .contact { grid-template-columns: 1fr; }
-  .contact-links a { grid-template-columns: 1fr; gap: .45rem; }
+  .contact-panel { max-width: none; justify-self: stretch; }
+  .contact-links { grid-template-columns: 1fr; }
+  .contact-links a { min-height: 88px; }
 }
 
 @media (max-width: 620px) {
