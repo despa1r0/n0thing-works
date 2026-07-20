@@ -72,43 +72,43 @@ const translations = {
 
 const projects = [
   {
-    id: "tgob", glyph: "TG/02", year: "2026", href: "https://github.com/despa1r0/TGOB-fin",
-    tags: ["Python", "Telegram Bot", "SQLite", "Self-hosted"],
-    title: { en: "TGOB-fin", pl: "TGOB-fin", uk: "TGOB-fin" },
-    description: {
-      en: "Lightweight self-hosted Telegram expense tracker using SQLite, Markdown-based data output and synchronization across devices.",
-      pl: "Lekki, self-hosted tracker wydatków w Telegramie oparty na SQLite, danych w Markdown i synchronizacji między urządzeniami.",
-      uk: "Легкий self-hosted Telegram-трекер витрат на SQLite з даними у Markdown та синхронізацією між пристроями."
-    }
-  },
-  {
-    id: "market", glyph: "ML/03", year: "2026", href: "https://github.com/despa1r0/Trump-market-prediction-model",
-    tags: ["Python", "ML", "Flask", "Pandas"],
-    title: { en: "Market prediction pipeline", pl: "Pipeline predykcji rynku", uk: "Пайплайн прогнозування ринку" },
-    description: {
-      en: "Modular ML system connecting social posts with S&P 500 data, feature engineering, model comparison and a Flask inference interface.",
-      pl: "Modularny system ML łączący posty społecznościowe z danymi S&P 500, feature engineering, porównanie modeli i interfejs Flask.",
-      uk: "Модульна ML-система, що поєднує соціальні дописи з даними S&P 500, feature engineering, порівняння моделей та Flask-інтерфейс."
-    }
-  },
-  {
-    id: "jobhunt", glyph: "JH/04", year: "2026", href: "https://github.com/despa1r0/jobHunt",
-    tags: ["Playwright", "PostgreSQL", "Telegram", "Docker"],
-    title: { en: "jobHunt automation", pl: "Automatyzacja jobHunt", uk: "Автоматизація jobHunt" },
-    description: {
-      en: "Vacancy scraper with Playwright, PostgreSQL persistence, Telegram filters and a container-ready headless worker.",
-      pl: "Scraper ofert pracy z Playwright, bazą PostgreSQL, filtrami Telegram i kontenerowym workerem headless.",
-      uk: "Скрапер вакансій на Playwright з PostgreSQL, Telegram-фільтрами та контейнерним headless worker."
-    }
-  },
-  {
     id: "hdrezka", glyph: "HD/01", year: "2026", href: "https://github.com/despa1r0/hdrezka_search", featured: true,
-    tags: ["FastAPI", "PostgreSQL", "Docker", "CI/CD", "Grafana/Loki", "VPS"],
+    tags: ["FastAPI", "PostgreSQL", "Docker", "CI/CD", "Grafana/Loki"],
     title: { en: "HDrezka Search", pl: "HDrezka Search", uk: "HDrezka Search" },
     description: {
-      en: "Media database and search service with per-user states, crawler automation, PostgreSQL backups, Docker deployment, GitHub Actions CI/CD with health checks and rollback, plus Grafana/Loki/Promtail logs.",
-      pl: "Serwis bazy i wyszukiwania mediów ze stanami użytkowników, crawlerem, backupami PostgreSQL, Dockerem, CI/CD GitHub Actions z health checkiem i rollbackiem oraz logami Grafana/Loki/Promtail.",
-      uk: "Сервіс бази та пошуку медіа зі станами користувачів, crawler-автоматизацією, backup PostgreSQL, Docker, CI/CD GitHub Actions із health check та rollback, а також логами Grafana/Loki/Promtail."
+      en: "Self-hosted media search service: FastAPI, PostgreSQL, crawler, Docker, GitHub Actions deploy with health checks/rollback, Grafana/Loki logs.",
+      pl: "Self-hosted wyszukiwarka mediów: FastAPI, PostgreSQL, crawler, Docker, deploy GitHub Actions z health check/rollback, logi Grafana/Loki.",
+      uk: "Self-hosted сервіс пошуку медіа: FastAPI, PostgreSQL, crawler, Docker, deploy через GitHub Actions з health check/rollback, логи Grafana/Loki."
+    }
+  },
+  {
+    id: "tgob", glyph: "TG/02", year: "2026", href: "https://github.com/despa1r0/TGOB-fin",
+    tags: ["Python", "aiogram", "PostgreSQL", "Docker"],
+    title: { en: "TGOB-fin", pl: "TGOB-fin", uk: "TGOB-fin" },
+    description: {
+      en: "Multi-user Telegram expense bot (aiogram 3): PostgreSQL, NBP FX conversion, stats, Markdown/PDF export, Docker Compose deploy.",
+      pl: "Wieloużytkowy bot wydatków w Telegramie (aiogram 3): PostgreSQL, kursy NBP, statystyki, eksport Markdown/PDF, Docker Compose.",
+      uk: "Багатокористувацький Telegram-бот витрат (aiogram 3): PostgreSQL, курси NBP, статистика, експорт Markdown/PDF, Docker Compose."
+    }
+  },
+  {
+    id: "jobhunt", glyph: "JH/03", year: "2026", href: "https://github.com/despa1r0/jobHunt",
+    tags: ["Playwright", "FastAPI", "PostgreSQL", "Docker"],
+    title: { en: "jobHunt", pl: "jobHunt", uk: "jobHunt" },
+    description: {
+      en: "Job scraper (Playwright) with PostgreSQL, filters, Telegram/Discord bots and FastAPI — Docker-ready headless workers.",
+      pl: "Scraper ofert (Playwright) z PostgreSQL, filtrami, botami Telegram/Discord i FastAPI — headless workery w Dockerze.",
+      uk: "Скрапер вакансій (Playwright) з PostgreSQL, фільтрами, ботами Telegram/Discord і FastAPI — headless workers у Docker."
+    }
+  },
+  {
+    id: "devops-prac", glyph: "WW/04", year: "2026", href: "https://github.com/despa1r0/devops-prac",
+    tags: ["Terraform", "Docker Compose", "GitHub Actions", "PostgreSQL"],
+    title: { en: "WeatherWatch", pl: "WeatherWatch", uk: "WeatherWatch" },
+    description: {
+      en: "Full-stack weather dashboard with Terraform IaC for cloud provisioning, Docker Compose orchestration, GitHub Actions CI/CD pipeline, PostgreSQL and automated init scripts.",
+      pl: "Full-stack dashboard pogodowy z Terraform IaC do provisioningu chmury, orkiestracją Docker Compose, pipeline CI/CD GitHub Actions, PostgreSQL i automatycznymi skryptami inicjalizacji.",
+      uk: "Full-stack погодний дашборд із Terraform IaC для хмарного провізіонінгу, оркестрацією Docker Compose, CI/CD pipeline GitHub Actions, PostgreSQL та автоматичними скриптами ініціалізації."
     }
   }
 ];
