@@ -1,0 +1,17 @@
+.git
+.github
+.idea
+.vscode
+*.md
+deploy/nginx.conf.example
+deploy/nginx.bootstrap.conf.example
+opencode.json
+PROJECT_PLAN.md
+agent.md
+.gemini
+.antigravity
+main.tf
+terraform.tf
+server.stdout.log
+server.stderr.log
+.DS_Store
