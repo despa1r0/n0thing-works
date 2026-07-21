@@ -32,3 +32,13 @@ PROJECT_PLAN.md
 agent.md
 .gemini/
 .antigravity/
+
+# Secrets & Environment Variables
+.env
+.env.local
+.env.*
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+

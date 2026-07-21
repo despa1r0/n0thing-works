@@ -1,0 +1,8 @@
+services:
+  web:
+    image: ghcr.io/${IMAGE_NAME:-despa1r0/n0thing-works}:${IMAGE_TAG:-latest}
+    build: .
+    container_name: n0thing-works
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
